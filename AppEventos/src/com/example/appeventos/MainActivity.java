@@ -1,5 +1,10 @@
 package com.example.appeventos;
 
+import java.util.ArrayList;
+
+import com.example.appeventos.adapters.FeedEventosAdapter;
+import com.example.appeventos.adapters.model.Eventos;
+
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -7,10 +12,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
 
 public class MainActivity extends ActionBarActivity {
 
+	private ListView lvFeed;
+	private FeedEventosAdapter adapter;
+	
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 
@@ -21,6 +30,29 @@ public class MainActivity extends ActionBarActivity {
 
 		// ActionBar
 		configureActionBar();
+		
+		//Simulação dos eventos
+		ArrayList<Eventos> eventos = new ArrayList<Eventos>();
+		eventos.add(new Eventos("Evento 01", "22/08/2014", ""));
+		eventos.add(new Eventos("Evento 02", "23/08/2014", ""));
+		eventos.add(new Eventos("Evento 03", "24/08/2014", ""));
+		eventos.add(new Eventos("Evento 04", "25/08/2014", ""));
+		eventos.add(new Eventos("Evento 05", "26/08/2014", ""));
+		eventos.add(new Eventos("Evento 06", "27/08/2014", ""));
+		eventos.add(new Eventos("Evento 11", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 023", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 0342", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 074", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 0746", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 0756", "28/08/2014", ""));
+		eventos.add(new Eventos("Evento 077", "28/08/2014", ""));
+		
+		//Instanciar Adapter antes da lista
+		adapter = new FeedEventosAdapter(MainActivity.this,
+				R.layout.itemlist_feed, eventos);
+		
+		lvFeed = (ListView)findViewById(R.id.lvFeed);
+		lvFeed.setAdapter(adapter);
 	}
 	
 	@Override
