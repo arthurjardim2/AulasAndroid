@@ -34,9 +34,11 @@
             android:orientation="vertical" >
 
             <ImageView
+                android:id="@+id/ivPerfil"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:adjustViewBounds="true"
+                android:onClick="openProfile"
                 android:src="@drawable/perfil" />
 
             <TextView

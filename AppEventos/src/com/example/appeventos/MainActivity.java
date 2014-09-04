@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.example.appeventos.adapters.FeedEventosAdapter;
 import com.example.appeventos.adapters.model.Eventos;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -12,17 +13,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
 
 	private ListView lvFeed;
 	private FeedEventosAdapter adapter;
 	
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -103,5 +107,12 @@ public class MainActivity extends ActionBarActivity {
 
 		};
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
+	}
+	
+	public void openProfile(View v){
+		//INTENT TROCA DE TELA
+		//SWITCH SCREEN
+		Intent i = new Intent(MainActivity.this, PerfilActivity.class);
+		startActivity(i);
 	}
 }
