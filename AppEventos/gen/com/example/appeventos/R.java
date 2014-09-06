@@ -1079,11 +1079,12 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020056;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020057;
         public static final int apptheme_ic_navigation_drawer=0x7f020058;
-        public static final int festa=0x7f020059;
-        public static final int ic_launcher=0x7f02005a;
-        public static final int ic_map58=0x7f02005b;
-        public static final int ic_quit=0x7f02005c;
-        public static final int perfil=0x7f02005d;
+        public static final int bg=0x7f020059;
+        public static final int festa=0x7f02005a;
+        public static final int ic_launcher=0x7f02005b;
+        public static final int ic_map58=0x7f02005c;
+        public static final int ic_quit=0x7f02005d;
+        public static final int perfil=0x7f02005e;
     }
     public static final class id {
         public static final int action_bar=0x7f07001c;
@@ -1097,7 +1098,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070016;
         public static final int action_menu_presenter=0x7f070017;
         public static final int action_mode_close_button=0x7f070024;
-        public static final int action_settings=0x7f070046;
+        public static final int action_settings=0x7f070048;
         public static final int activity_chooser_view_content=0x7f070025;
         public static final int always=0x7f07000b;
         public static final int beginning=0x7f070011;
@@ -1112,9 +1113,9 @@ containing a value of this type.
         public static final int dropdown=0x7f07000f;
         public static final int edit_query=0x7f070030;
         public static final int end=0x7f070013;
-        public static final int etNascimento=0x7f070043;
+        public static final int etNascimento=0x7f070044;
         public static final int etNome=0x7f07003f;
-        public static final int etSenha=0x7f070042;
+        public static final int etSenha=0x7f070043;
         public static final int expand_activities_button=0x7f070026;
         public static final int expanded_menu=0x7f07002c;
         public static final int home=0x7f070014;
@@ -1122,6 +1123,7 @@ containing a value of this type.
         public static final int icon=0x7f07002a;
         public static final int ifRoom=0x7f07000a;
         public static final int image=0x7f070027;
+        public static final int ivEvento=0x7f070045;
         public static final int ivPerfil=0x7f07003e;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070029;
@@ -1130,6 +1132,7 @@ containing a value of this type.
         public static final int never=0x7f070009;
         public static final int none=0x7f070010;
         public static final int normal=0x7f070000;
+        public static final int pb=0x7f070042;
         public static final int progress_circular=0x7f070018;
         public static final int progress_horizontal=0x7f070019;
         public static final int radio=0x7f07002f;
@@ -1152,8 +1155,8 @@ containing a value of this type.
         public static final int tabMode=0x7f070002;
         public static final int title=0x7f07002b;
         public static final int top_action_bar=0x7f070020;
-        public static final int tvData=0x7f070045;
-        public static final int tvTitulo=0x7f070044;
+        public static final int tvData=0x7f070047;
+        public static final int tvTitulo=0x7f070046;
         public static final int up=0x7f070021;
         public static final int useLogo=0x7f070003;
         public static final int withText=0x7f07000c;

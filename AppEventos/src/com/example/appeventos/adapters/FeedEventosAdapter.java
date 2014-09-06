@@ -3,10 +3,15 @@ package com.example.appeventos.adapters;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.appeventos.R;
@@ -16,11 +21,12 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 
 	private ArrayList<Eventos> eventos;
 	private LayoutInflater inflater;
+	private Context context;
 	
 	public FeedEventosAdapter(Context context, int resource,
 			ArrayList<Eventos> eventos) {
 		super(context, resource, eventos);
-		
+		this.context = context;
 		this.eventos = eventos;
 		
 		inflater = (LayoutInflater)
@@ -34,12 +40,14 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 		
 		TextView tvTitulo;
 		TextView tvData;
+		ImageView ivEvento;
 		
 		if(convertView == null){
 			convertView = inflater.inflate(R.layout.itemlist_feed, null);
 			
 			tvTitulo = (TextView)convertView.findViewById(R.id.tvTitulo);
 			tvData = (TextView)convertView.findViewById(R.id.tvData);
+			ivEvento = (ImageView)convertView.findViewById(R.id.ivEvento);
 			
 			//PARTE 01 - QUANDO CONVERTVIEW FOR NULL
 			//Criação do holder para manter a ref. dos objetos
@@ -47,6 +55,7 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 			//Recebe os valores para manter a ref.
 			evHolder.tvTitulo = tvTitulo;
 			evHolder.tvData = tvData;
+			evHolder.ivEvento = ivEvento;
 			
 			//CV recebe TAG como sendo o holder
 			convertView.setTag(evHolder);
@@ -59,10 +68,20 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 			//Jogar as informações do holder nos componentes
 			tvTitulo = evHolder.tvTitulo;
 			tvData = evHolder.tvData;
+			ivEvento = evHolder.ivEvento;
 		}
 		
 		tvTitulo.setText(e.getTitulo());
 		tvData.setText(e.getData());
+		
+		ivEvento.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(Intent.ACTION_VIEW,
+						Uri.parse("http://www.google.com"));
+				context.startActivity(i);
+			}
+		});
 		
 		return convertView;
 	}
@@ -71,6 +90,7 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 	private class EventosHolder{
 		public TextView tvTitulo;
 		public TextView tvData;
+		public ImageView ivEvento;
 	}
 
 }

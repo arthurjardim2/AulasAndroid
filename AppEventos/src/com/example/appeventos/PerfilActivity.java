@@ -1,6 +1,8 @@
 package com.example.appeventos;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,12 +11,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class PerfilActivity extends ActionBarActivity{
 
 	private EditText etNome;
 	private CheckBox cbTeste01;
+	private ProgressBar pb;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,7 @@ public class PerfilActivity extends ActionBarActivity{
 		
 		etNome = (EditText)findViewById(R.id.etNome);
 		cbTeste01 = (CheckBox)findViewById(R.id.cbTeste01);
+		pb = (ProgressBar)findViewById(R.id.pb);
 	}
 
 	@Override
@@ -47,10 +52,10 @@ public class PerfilActivity extends ActionBarActivity{
 	public void acaoSalvar(View v){
 		
 		if (cbTeste01.isChecked()) {
-			Toast.makeText(PerfilActivity.this, etNome.getText().toString(),
-					Toast.LENGTH_LONG).show();
+			pb.setVisibility(View.GONE);
+		}else{
+			pb.setVisibility(View.VISIBLE);
 		}
-		
 	}
 	public void acaoCancelar(View v){
 		Toast.makeText(PerfilActivity.this, "CANCELAR",
