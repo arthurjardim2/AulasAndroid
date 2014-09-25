@@ -1,16 +1,20 @@
 package com.example.appeventos;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import com.example.appeventos.adapters.FeedEventosAdapter;
 import com.example.appeventos.adapters.model.Eventos;
+import com.exemple.appeventos.connection.Connection;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -57,6 +61,9 @@ public class MainActivity extends ActionBarActivity{
 		
 		lvFeed = (ListView)findViewById(R.id.lvFeed);
 		lvFeed.setAdapter(adapter);
+		
+		
+		new GetEventos().execute();
 	}
 	
 	@Override
@@ -115,4 +122,29 @@ public class MainActivity extends ActionBarActivity{
 		Intent i = new Intent(MainActivity.this, PerfilActivity.class);
 		startActivity(i);
 	}
+	
+	private class GetEventos extends AsyncTask<Void, Void, String>{
+
+		//SÓ EXECUÇÃO DA CONEXÃO
+		@Override
+		protected String doInBackground(Void... params) {
+				String result = Connection.sendRequestGet(
+						"http://www.eukip.com/aulas/feedeventos.html");
+			return result;
+		}
+		
+		//TRATAMENTO DA RESPOSTA DA CONEXÃO
+		@Override
+		protected void onPostExecute(String result) {
+			if (result != null) {
+				Log.i("teste", result);
+			}else{
+				Log.i("teste", "NULO DEU MERDA");
+			}
+			
+		}
+		
+	}
+	
 }
+

@@ -38,50 +38,23 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 		
 		Eventos e = eventos.get(position);
 		
+		EventosHolder holder;
+		
 		TextView tvTitulo;
-		TextView tvData;
-		ImageView ivEvento;
 		
 		if(convertView == null){
 			convertView = inflater.inflate(R.layout.itemlist_feed, null);
 			
 			tvTitulo = (TextView)convertView.findViewById(R.id.tvTitulo);
-			tvData = (TextView)convertView.findViewById(R.id.tvData);
-			ivEvento = (ImageView)convertView.findViewById(R.id.ivEvento);
+			tvTitulo.setText(e.getTitulo());
 			
-			//PARTE 01 - QUANDO CONVERTVIEW FOR NULL
-			//Criação do holder para manter a ref. dos objetos
-			EventosHolder evHolder = new EventosHolder();
-			//Recebe os valores para manter a ref.
-			evHolder.tvTitulo = tvTitulo;
-			evHolder.tvData = tvData;
-			evHolder.ivEvento = ivEvento;
+			holder = new EventosHolder();
+			holder.tvTitulo = tvTitulo;
 			
-			//CV recebe TAG como sendo o holder
-			convertView.setTag(evHolder);
+			convertView.setTag(holder);
 		}else{
-			
-			//PARTE 02 - QUANDO CONVERTVIEW JÁ TIVER INFORMAÇÕES MANTIDAS
-			//PELO HOLDER
-			//Capturar o holder
-			EventosHolder evHolder = (EventosHolder)convertView.getTag();
-			//Jogar as informações do holder nos componentes
-			tvTitulo = evHolder.tvTitulo;
-			tvData = evHolder.tvData;
-			ivEvento = evHolder.ivEvento;
+			holder = (EventosHolder) convertView.getTag();
 		}
-		
-		tvTitulo.setText(e.getTitulo());
-		tvData.setText(e.getData());
-		
-		ivEvento.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent i = new Intent(Intent.ACTION_VIEW,
-						Uri.parse("http://www.google.com"));
-				context.startActivity(i);
-			}
-		});
 		
 		return convertView;
 	}
