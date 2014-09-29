@@ -1,5 +1,10 @@
 package com.example.connectionvolley;
 
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -10,6 +15,7 @@ import android.widget.ListView;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
+import com.example.connectionvolley.adapter.Foto;
 import com.example.connectionvolley.adapter.FotosAdapter;
 import com.example.connectionvolley.connection.requests.ExampleRequest;
 
@@ -18,17 +24,19 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 
 	private ListView lvFotos;
 	private FotosAdapter adapter;
+	private ArrayList<Foto> fotos;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        adapter = new FotosAdapter(this, R.layout.imageview_volley, null);
+        fotos = new ArrayList<Foto>();
+        
+        adapter = new FotosAdapter(MainActivity.this, R.layout.imageview_volley, fotos);
         
         lvFotos = (ListView)findViewById(R.id.lvFotos);
         lvFotos.setAdapter(adapter);
-        
         
         ExampleRequest req = new ExampleRequest();
         req.requestImageGet(MainActivity.this, MainActivity.this);
@@ -63,6 +71,24 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 
 	@Override
 	public void onResponse(Object response) {
-		Log.i("teste", response.toString());
+		//Log.i("teste", response.toString());
+		try {
+			JSONArray root = new JSONArray((String)response);
+			
+			for (int i = 0; i < root.length(); i++) {
+			
+				Foto f = new Foto();
+				f.setTitulo(root.getJSONObject(i).getString("evento"));
+				
+				fotos.add(f);
+			}
+			
+			adapter.notifyDataSetChanged();
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
