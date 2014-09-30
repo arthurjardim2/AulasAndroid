@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 
 	@Override
 	public void onResponse(Object response) {
-		//Log.i("teste", response.toString());
+		Log.i("teste", response.toString());
 		try {
 			JSONArray root = new JSONArray((String)response);
 			
@@ -79,6 +79,7 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 			
 				Foto f = new Foto();
 				f.setTitulo(root.getJSONObject(i).getString("evento"));
+				f.setUrl(root.getJSONObject(i).getString("img"));
 				
 				fotos.add(f);
 			}

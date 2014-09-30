@@ -19,7 +19,7 @@ public class ApplicationController extends Application {
 
 	private RequestQueue mRequestQueue;
 
-	private static final int MAX_IMAGE_CACHE_ENTRIES = 1000;
+	private static final int MAX_IMAGE_CACHE_ENTRIES = 150;
 
 	/**
 	 * ImageLoader global

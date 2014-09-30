@@ -54,7 +54,10 @@ public class FotosAdapter extends ArrayAdapter<Foto>{
 		}
 		
 		// Trecho 1
-		//image.setImageUrl(f.getUrl(), ApplicationController.getImageLoader());
+		image.setImageUrl(f.getUrl(), ApplicationController.getImageLoader());
+		
+		
+		
 		titulo.setText(f.getTitulo());
 		 
 		return convertView;
