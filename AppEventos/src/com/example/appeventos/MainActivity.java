@@ -1,11 +1,6 @@
 package com.example.appeventos;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-
-import com.example.appeventos.adapters.FeedEventosAdapter;
-import com.example.appeventos.adapters.model.Eventos;
-import com.exemple.appeventos.connection.Connection;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -17,13 +12,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.AdapterView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+import com.example.appeventos.adapters.FeedEventosAdapter;
+import com.example.appeventos.adapters.model.Eventos;
+import com.example.appeventos.core.Controller;
+import com.exemple.appeventos.connection.Connection;
 
 
-public class MainActivity extends ActionBarActivity{
+public class MainActivity extends ActionBarActivity implements OnItemClickListener{
 
 	private ListView lvFeed;
 	private FeedEventosAdapter adapter;
@@ -61,6 +61,7 @@ public class MainActivity extends ActionBarActivity{
 		
 		lvFeed = (ListView)findViewById(R.id.lvFeed);
 		lvFeed.setAdapter(adapter);
+		lvFeed.setOnItemClickListener(this);
 		
 		
 		new GetEventos().execute();
@@ -143,8 +144,25 @@ public class MainActivity extends ActionBarActivity{
 			}
 			
 		}
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+		Eventos ev = adapter.getItem(position);
+		Toast.makeText(this, ev.getData(), Toast.LENGTH_SHORT).show();
 		
+		Controller.getInstance().setCurrentEvento(ev);
+		
+		Intent i = new Intent(MainActivity.this, DetalheEventosActivity.class);
+		startActivity(i);
 	}
 	
 }
+
+
+
+
+
+
+
 

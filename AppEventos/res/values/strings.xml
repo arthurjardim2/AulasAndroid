@@ -7,5 +7,6 @@
     <string name="empty"></string>
     <string name="title_activity_perfil">PerfilActivity</string>
     <string name="btSalvar">Salvar</string>
+    <string name="title_activity_detalhe_eventos">DetalheEventosActivity</string>
 
 </resources>

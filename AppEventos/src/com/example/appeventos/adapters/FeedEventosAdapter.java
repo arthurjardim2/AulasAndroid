@@ -46,7 +46,6 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 			convertView = inflater.inflate(R.layout.itemlist_feed, null);
 			
 			tvTitulo = (TextView)convertView.findViewById(R.id.tvTitulo);
-			tvTitulo.setText(e.getTitulo());
 			
 			holder = new EventosHolder();
 			holder.tvTitulo = tvTitulo;
@@ -54,7 +53,10 @@ public class FeedEventosAdapter extends ArrayAdapter<Eventos>{
 			convertView.setTag(holder);
 		}else{
 			holder = (EventosHolder) convertView.getTag();
+			tvTitulo = holder.tvTitulo;
 		}
+		
+		tvTitulo.setText(e.getTitulo());
 		
 		return convertView;
 	}
