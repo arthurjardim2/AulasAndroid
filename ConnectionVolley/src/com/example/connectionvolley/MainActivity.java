@@ -5,12 +5,16 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
@@ -84,6 +88,13 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 				fotos.add(f);
 			}
 			
+			SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+			SharedPreferences.Editor editor = pref.edit();
+			
+			editor.putString("json", (String)response);
+			
+			editor.commit();
+			
 			adapter.notifyDataSetChanged();
 			
 		} catch (JSONException e) {
@@ -91,5 +102,13 @@ public class MainActivity extends ActionBarActivity implements Listener, ErrorLi
 			e.printStackTrace();
 		}
 		
+	}
+	
+	public void getPref(View v){
+		SharedPreferences pref =
+		PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+		String titulo = pref.getString("json", null);
+		
+		Toast.makeText(MainActivity.this, titulo, Toast.LENGTH_SHORT).show();
 	}
 }

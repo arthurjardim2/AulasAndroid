@@ -39,21 +39,24 @@ public class MainActivity extends ActionBarActivity implements OnItemClickListen
 		// ActionBar
 		configureActionBar();
 		
+		
+		
+		
 		//Simulação dos eventos
 		ArrayList<Eventos> eventos = new ArrayList<Eventos>();
-		eventos.add(new Eventos("Evento 01", "22/08/2014", ""));
-		eventos.add(new Eventos("Evento 02", "23/08/2014", ""));
-		eventos.add(new Eventos("Evento 03", "24/08/2014", ""));
-		eventos.add(new Eventos("Evento 04", "25/08/2014", ""));
-		eventos.add(new Eventos("Evento 05", "26/08/2014", ""));
-		eventos.add(new Eventos("Evento 06", "27/08/2014", ""));
-		eventos.add(new Eventos("Evento 11", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 023", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 0342", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 074", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 0746", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 0756", "28/08/2014", ""));
-		eventos.add(new Eventos("Evento 077", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 01", "22/08/2014", ""));
+//		eventos.add(new Eventos("Evento 02", "23/08/2014", ""));
+//		eventos.add(new Eventos("Evento 03", "24/08/2014", ""));
+//		eventos.add(new Eventos("Evento 04", "25/08/2014", ""));
+//		eventos.add(new Eventos("Evento 05", "26/08/2014", ""));
+//		eventos.add(new Eventos("Evento 06", "27/08/2014", ""));
+//		eventos.add(new Eventos("Evento 11", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 023", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 0342", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 074", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 0746", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 0756", "28/08/2014", ""));
+//		eventos.add(new Eventos("Evento 077", "28/08/2014", ""));
 		
 		//Instanciar Adapter antes da lista
 		adapter = new FeedEventosAdapter(MainActivity.this,
@@ -62,7 +65,6 @@ public class MainActivity extends ActionBarActivity implements OnItemClickListen
 		lvFeed = (ListView)findViewById(R.id.lvFeed);
 		lvFeed.setAdapter(adapter);
 		lvFeed.setOnItemClickListener(this);
-		
 		
 		new GetEventos().execute();
 	}
