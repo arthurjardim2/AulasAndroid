@@ -176,6 +176,7 @@
     <string name="b5">Views</string>
     <string name="b6">Menus</string>
     <string name="b7">Dialogs</string>
+    <string name="b8">ListView</string>
     <string name="empty"/>
     <string name="g1">Teste 01</string>
     <string name="g2">Teste 02</string>
@@ -191,6 +192,7 @@
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
     <string name="title_activity_image_view">ImageViewActivity</string>
     <string name="title_activity_linear_layout">LinearLayoutActivity</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
     <string name="title_activity_menus">MenusActivity</string>
     <string name="title_activity_radio_button">RadioButtonActivity</string>
     <string name="title_activity_rating_bar">RatingBarActivity</string>

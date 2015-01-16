@@ -78,6 +78,10 @@
             android:name=".views.MenusActivity"
             android:label="@string/title_activity_menus" >
         </activity>
+        <activity
+            android:name=".ListViewActivity"
+            android:label="@string/title_activity_list_view" >
+        </activity>
     </application>
 
 </manifest>

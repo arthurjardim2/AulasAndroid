@@ -1,8 +1,8 @@
 package com.android.josias.layouts;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +50,11 @@ public class MainActivity extends ActionBarActivity {
 
     public void openDialogs(View v){
         Intent i = new Intent(this, DialogsActivity.class);
+        startActivity(i);
+    }
+
+    public void openListView(View v){
+        Intent i = new Intent(this, ListViewActivity.class);
         startActivity(i);
     }
 

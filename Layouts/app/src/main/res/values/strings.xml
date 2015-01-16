@@ -14,6 +14,7 @@
     <string name="b5">Views</string>
     <string name="b6">Menus</string>
     <string name="b7">Dialogs</string>
+    <string name="b8">ListView</string>
     <string name="v1">TextView, EditText e Button</string>
     <string name="v2">CheckBox</string>
     <string name="v3">RadioButton</string>
@@ -49,5 +50,6 @@
     <string name="title_activity_date_time_picker">DateTimePicker</string>
     <string name="title_activity_dialogs">DialogsActivity</string>
     <string name="title_activity_menus">MenusActivity</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
 
 </resources>
