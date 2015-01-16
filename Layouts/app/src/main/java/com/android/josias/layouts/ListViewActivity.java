@@ -4,7 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.josias.layouts.adapters.ListViewAdapter;
 import com.android.josias.layouts.models.Evento;
@@ -12,7 +15,7 @@ import com.android.josias.layouts.models.Evento;
 import java.util.ArrayList;
 
 
-public class ListViewActivity extends ActionBarActivity {
+public class ListViewActivity extends ActionBarActivity implements AdapterView.OnItemClickListener{
 
     private ListView lv;
     private ListViewAdapter adapter;
@@ -31,6 +34,7 @@ public class ListViewActivity extends ActionBarActivity {
         lv = (ListView)findViewById(R.id.lv);
         adapter = new ListViewAdapter(this, R.layout.itemlist_evento, eventos);
         lv.setAdapter(adapter);
+        lv.setOnItemClickListener(this);
     }
 
 
@@ -54,5 +58,11 @@ public class ListViewActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Evento e = adapter.getItem(position);
+        Toast.makeText(this, e.getTitulo() + ": " + e.getDescricao(), Toast.LENGTH_SHORT).show();
     }
 }

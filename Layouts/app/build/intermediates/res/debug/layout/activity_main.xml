@@ -50,12 +50,11 @@
         android:layout_height="wrap_content"
         android:onClick="openDialogs"
         android:text="@string/b7" />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="openListView"
-        android:text="@string/b7" />
+        android:text="@string/b8" />
 
 </LinearLayout>
 <!-- From: file:/D:/Meus%20Projetos%20Android/Aulas%20Android/2015/Layouts/app/src/main/res/layout/activity_main.xml -->
