@@ -18,9 +18,16 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="openAsync"
         android:text="@string/async" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="openVolley"
         android:text="@string/volley" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openVolleyIL"
+        android:text="@string/imageLoader" />
 </LinearLayout>

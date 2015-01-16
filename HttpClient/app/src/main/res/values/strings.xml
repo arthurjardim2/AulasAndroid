@@ -7,7 +7,9 @@
     <string name="titulo">Http Client</string>
     <string name="async">AsyncTask - Connection Pura</string>
     <string name="volley">Volley</string>
+    <string name="imageLoader">Volley ImageLoader</string>
     <string name="title_activity_async_task">AsyncTask</string>
     <string name="title_activity_volley">VolleyActivity</string>
+    <string name="title_activity_volley_image_loader">VolleyImageLoaderActivity</string>
 
 </resources>
