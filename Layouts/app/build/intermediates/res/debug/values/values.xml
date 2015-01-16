@@ -186,6 +186,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_check_box">CheckBoxActivity</string>
     <string name="title_activity_date_time_picker">DateTimePicker</string>
+    <string name="title_activity_dialogs">DialogsActivity</string>
     <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
     <string name="title_activity_image_view">ImageViewActivity</string>

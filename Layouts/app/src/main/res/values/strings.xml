@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Layouts</string>
+    <string name="empty"></string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tituloProjeto">Projeto Layouts</string>
+    <string name="tituloMenus">Menus</string>
+    <string name="b1">FrameLayout</string>
+    <string name="b2">LinearLayout</string>
+    <string name="b3">RelativeLayout</string>
+    <string name="b4">DrawerLayout</string>
+    <string name="b5">Views</string>
+    <string name="b6">Menus</string>
+    <string name="b7">Dialogs</string>
+    <string name="v1">TextView, EditText e Button</string>
+    <string name="v2">CheckBox</string>
+    <string name="v3">RadioButton</string>
+    <string name="v4">ImageView</string>
+    <string name="v5">Spinner</string>
+    <string name="v6">RatingBar</string>
+    <string name="v7">Datepicker e TimerPicker</string>
+    <string name="v8">WebView</string>
+    <string name="title_activity_linear_layout">LinearLayoutActivity</string>
+    <string name="g1">Teste 01</string>
+    <string name="g2">Teste 02</string>
+    <string name="g3">Teste 03</string>
+    <string name="g4">Teste 04</string>
+    <string name="g5">Teste 05</string>
+    <string name="g6">Teste 06</string>
+    <string name="title_activity_relative_layout">RelativeLayoutActivity</string>
+    <string name="title_activity_frame_layout">FrameLayoutActivity</string>
+    <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
+    <string name="title_activity_views">ViewsActivity</string>
+    <string name="title_activity_tv_ed_button">TvEdButton</string>
+    <string name="title_activity_check_box">CheckBoxActivity</string>
+    <string name="title_activity_radio_button">RadioButtonActivity</string>
+    <string name="title_activity_image_view">ImageViewActivity</string>
+    <string name="title_activity_spinner">Spinner</string>
+
+    <string-array name="array">
+        <item>Liberar</item>
+        <item>Travar</item>
+    </string-array>
+
+    <string name="title_activity_rating_bar">RatingBarActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_date_time_picker">DateTimePicker</string>
+    <string name="title_activity_dialogs">DialogsActivity</string>
+    <string name="title_activity_menus">MenusActivity</string>
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.josias.layouts" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:label="@string/title_activity_linear_layout" >
+        </activity>
+        <activity
+            android:name=".RelativeLayoutActivity"
+            android:label="@string/title_activity_relative_layout" >
+        </activity>
+        <activity
+            android:name=".FrameLayoutActivity"
+            android:label="@string/title_activity_frame_layout" >
+        </activity>
+        <activity
+            android:name=".DrawerLayoutActivity"
+            android:label="@string/title_activity_drawer_layout" >
+        </activity>
+        <activity
+            android:name=".ViewsActivity"
+            android:label="@string/title_activity_views" >
+        </activity>
+        <activity
+            android:name=".views.TextViewEditTextButtonActivity"
+            android:label="@string/title_activity_tv_ed_button" >
+        </activity>
+        <activity
+            android:name=".views.CheckBoxActivity"
+            android:label="@string/title_activity_check_box" >
+        </activity>
+        <activity
+            android:name=".views.RadioButtonActivity"
+            android:label="@string/title_activity_radio_button" >
+        </activity>
+        <activity
+            android:name=".views.ImageViewActivity"
+            android:label="@string/title_activity_image_view" >
+        </activity>
+        <activity
+            android:name=".views.SpinnerActivity"
+            android:label="@string/title_activity_spinner" >
+        </activity>
+        <activity
+            android:name=".views.RatingBarActivity"
+            android:label="@string/title_activity_rating_bar" >
+        </activity>
+        <activity
+            android:name=".views.WebViewActivity"
+            android:label="@string/title_activity_web_view" >
+        </activity>
+        <activity
+            android:name=".views.DateTimePickerActivity"
+            android:label="@string/title_activity_date_time_picker" >
+        </activity>
+        <activity
+            android:name=".DialogsActivity"
+            android:label="@string/title_activity_dialogs" >
+        </activity>
+        <activity
+            android:name=".views.MenusActivity"
+            android:label="@string/title_activity_menus" >
+        </activity>
+    </application>
+
+</manifest>

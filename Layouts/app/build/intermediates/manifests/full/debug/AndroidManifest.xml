@@ -76,6 +76,10 @@
             android:name="com.android.josias.layouts.views.DateTimePickerActivity"
             android:label="@string/title_activity_date_time_picker" >
         </activity>
+        <activity
+            android:name="com.android.josias.layouts.DialogsActivity"
+            android:label="@string/title_activity_dialogs" >
+        </activity>
     </application>
 
 </manifest>
