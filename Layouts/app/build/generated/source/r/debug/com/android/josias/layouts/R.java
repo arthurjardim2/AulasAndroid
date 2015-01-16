@@ -1302,8 +1302,9 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020030;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
-        public static final int ic_launcher=0x7f020033;
-        public static final int img=0x7f020034;
+        public static final int ic_action_refresh=0x7f020033;
+        public static final int ic_launcher=0x7f020034;
+        public static final int img=0x7f020035;
     }
     public static final class id {
         public static final int action_bar=0x7f090031;
@@ -1366,6 +1367,7 @@ containing a value of this type.
         public static final int rb02=0x7f090047;
         public static final int rbGroup=0x7f090045;
         public static final int rbStar=0x7f090049;
+        public static final int refresh=0x7f090056;
         public static final int search_badge=0x7f090035;
         public static final int search_bar=0x7f090034;
         public static final int search_button=0x7f090036;
@@ -1383,6 +1385,9 @@ containing a value of this type.
         public static final int spLock=0x7f090052;
         public static final int split_action_bar=0x7f090007;
         public static final int submit_area=0x7f09003c;
+        public static final int t01=0x7f090057;
+        public static final int t02=0x7f090058;
+        public static final int t03=0x7f090059;
         public static final int tabMode=0x7f09000b;
         public static final int title=0x7f090027;
         public static final int tv01=0x7f09004d;
@@ -1428,14 +1433,15 @@ containing a value of this type.
         public static final int activity_image_view=0x7f03001c;
         public static final int activity_linear_layout=0x7f03001d;
         public static final int activity_main=0x7f03001e;
-        public static final int activity_radio_button=0x7f03001f;
-        public static final int activity_rating_bar=0x7f030020;
-        public static final int activity_relative_layout=0x7f030021;
-        public static final int activity_spinner=0x7f030022;
-        public static final int activity_tv_ed_button=0x7f030023;
-        public static final int activity_views=0x7f030024;
-        public static final int activity_web_view=0x7f030025;
-        public static final int support_simple_spinner_dropdown_item=0x7f030026;
+        public static final int activity_menus=0x7f03001f;
+        public static final int activity_radio_button=0x7f030020;
+        public static final int activity_rating_bar=0x7f030021;
+        public static final int activity_relative_layout=0x7f030022;
+        public static final int activity_spinner=0x7f030023;
+        public static final int activity_tv_ed_button=0x7f030024;
+        public static final int activity_views=0x7f030025;
+        public static final int activity_web_view=0x7f030026;
+        public static final int support_simple_spinner_dropdown_item=0x7f030027;
     }
     public static final class menu {
         public static final int menu_check_box=0x7f0d0000;
@@ -1446,13 +1452,14 @@ containing a value of this type.
         public static final int menu_image_view=0x7f0d0005;
         public static final int menu_linear_layout=0x7f0d0006;
         public static final int menu_main=0x7f0d0007;
-        public static final int menu_radio_button=0x7f0d0008;
-        public static final int menu_rating_bar=0x7f0d0009;
-        public static final int menu_relative_layout=0x7f0d000a;
-        public static final int menu_spinner=0x7f0d000b;
-        public static final int menu_tv_ed_button=0x7f0d000c;
-        public static final int menu_views=0x7f0d000d;
-        public static final int menu_web_view=0x7f0d000e;
+        public static final int menu_menus=0x7f0d0008;
+        public static final int menu_radio_button=0x7f0d0009;
+        public static final int menu_rating_bar=0x7f0d000a;
+        public static final int menu_relative_layout=0x7f0d000b;
+        public static final int menu_spinner=0x7f0d000c;
+        public static final int menu_tv_ed_button=0x7f0d000d;
+        public static final int menu_views=0x7f0d000e;
+        public static final int menu_web_view=0x7f0d000f;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0b0000;
@@ -1495,23 +1502,24 @@ containing a value of this type.
         public static final int title_activity_frame_layout=0x7f0b0025;
         public static final int title_activity_image_view=0x7f0b0026;
         public static final int title_activity_linear_layout=0x7f0b0027;
-        public static final int title_activity_radio_button=0x7f0b0028;
-        public static final int title_activity_rating_bar=0x7f0b0029;
-        public static final int title_activity_relative_layout=0x7f0b002a;
-        public static final int title_activity_spinner=0x7f0b002b;
-        public static final int title_activity_tv_ed_button=0x7f0b002c;
-        public static final int title_activity_views=0x7f0b002d;
-        public static final int title_activity_web_view=0x7f0b002e;
-        public static final int tituloMenus=0x7f0b002f;
-        public static final int tituloProjeto=0x7f0b0030;
-        public static final int v1=0x7f0b0031;
-        public static final int v2=0x7f0b0032;
-        public static final int v3=0x7f0b0033;
-        public static final int v4=0x7f0b0034;
-        public static final int v5=0x7f0b0035;
-        public static final int v6=0x7f0b0036;
-        public static final int v7=0x7f0b0037;
-        public static final int v8=0x7f0b0038;
+        public static final int title_activity_menus=0x7f0b0028;
+        public static final int title_activity_radio_button=0x7f0b0029;
+        public static final int title_activity_rating_bar=0x7f0b002a;
+        public static final int title_activity_relative_layout=0x7f0b002b;
+        public static final int title_activity_spinner=0x7f0b002c;
+        public static final int title_activity_tv_ed_button=0x7f0b002d;
+        public static final int title_activity_views=0x7f0b002e;
+        public static final int title_activity_web_view=0x7f0b002f;
+        public static final int tituloMenus=0x7f0b0030;
+        public static final int tituloProjeto=0x7f0b0031;
+        public static final int v1=0x7f0b0032;
+        public static final int v2=0x7f0b0033;
+        public static final int v3=0x7f0b0034;
+        public static final int v4=0x7f0b0035;
+        public static final int v5=0x7f0b0036;
+        public static final int v6=0x7f0b0037;
+        public static final int v7=0x7f0b0038;
+        public static final int v8=0x7f0b0039;
     }
     public static final class style {
         /**  Customize your theme here. 

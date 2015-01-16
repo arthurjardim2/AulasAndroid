@@ -80,6 +80,10 @@
             android:name="com.android.josias.layouts.DialogsActivity"
             android:label="@string/title_activity_dialogs" >
         </activity>
+        <activity
+            android:name="com.android.josias.layouts.views.MenusActivity"
+            android:label="@string/title_activity_menus" >
+        </activity>
     </application>
 
 </manifest>

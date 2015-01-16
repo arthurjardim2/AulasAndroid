@@ -1,7 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.android.josias.layouts.views.MenusActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    tools:context="br.com.uther.handprocess.LoginActivity" >
+
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="100"
+        android:title="Atualizar"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/t01"
+        android:title="Teste 01"
+        />
+    <item android:id="@+id/t02"
+        android:title="Teste 02" />
+
+    <item android:id="@+id/t03"
+        android:title="Teste 03" />
+
 </menu>

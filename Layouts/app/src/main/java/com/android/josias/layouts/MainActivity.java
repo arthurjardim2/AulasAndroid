@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.android.josias.layouts.views.MenusActivity;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -42,7 +44,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void openMenus(View v){
-
+        Intent i = new Intent(this, MenusActivity.class);
+        startActivity(i);
     }
 
     public void openDialogs(View v){

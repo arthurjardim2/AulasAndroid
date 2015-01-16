@@ -191,6 +191,7 @@
     <string name="title_activity_frame_layout">FrameLayoutActivity</string>
     <string name="title_activity_image_view">ImageViewActivity</string>
     <string name="title_activity_linear_layout">LinearLayoutActivity</string>
+    <string name="title_activity_menus">MenusActivity</string>
     <string name="title_activity_radio_button">RadioButtonActivity</string>
     <string name="title_activity_rating_bar">RatingBarActivity</string>
     <string name="title_activity_relative_layout">RelativeLayoutActivity</string>
